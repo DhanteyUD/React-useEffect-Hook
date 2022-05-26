@@ -1,6 +1,6 @@
 # Fetch Data from an API
 
-> Learn the basics of asynchronous functions and promises by fetching data from an API using fetch, useEffect and useState
+Learn the basics of asynchronous functions and promises by fetching data from an API using fetch, useEffect and useState
 
 ---
 
@@ -22,7 +22,7 @@ const App = () => {
     // Fetch API here
   }, []);
 
-  return <div>Display response here</div>;
+  return <div>{Display response here}</div>;
 };
 
 export default App;
@@ -34,9 +34,9 @@ export default App;
 
 Define your URL
 
-> When a user lands on a page, he want to call the API. In other words, you want to call the API during the >mounting part of the > component's lifecycle.
+> When a user lands on a page, he want to call the API. In other words, you want to call the API during the mounting part of the component's lifecycle.
 >
-> The API url you want to get a data from would look like this: `https://api.random-data.com/data`. You will save it in a variable > inside of the `useEffect` hook.
+> The API url you want to get a data from would look like this: `https://api.random-data.com/data`. You will save it in a variable inside of the `useEffect` hook.
 
 ```js
 useEffect(() => {
@@ -50,7 +50,7 @@ useEffect(() => {
 
 Create asynchronous function
 
-> Then, create an asynchronous function to fetch your data. An asynchronous function is a function that needs to wait after the > promise is resolved before continuing. In your case, the function will need to wait after the data is fetched (our promise)
+> ...Then, create an asynchronous function to fetch your data. An asynchronous function is a function that needs to wait after the promise is resolved before continuing. In your case, the function will need to wait after the data is fetched (our promise)
 > before continuing.
 
 ```js
@@ -93,6 +93,8 @@ useEffect(() => {
 >
 > Once we get a response, we are parsing it using the .json() function, meaning that we are transforming the response into JSON > data that we can easily read. Then, we are printing the JSON data in the console.
 
+---
+
 ### Step 4
 
 Get the data
@@ -102,6 +104,7 @@ At this point, if you check in the console, you would have gotten the data from 
 ```js
 console.log(json.data);
 ```
+---
 
 ### Step 5
 
@@ -109,7 +112,7 @@ Save the data in a local state
 
 > Now you should have gotten the actual data, you can save it into a local state using the useState hook.
 
-Import useState and define it.
+Import `useState` and define it.
 
 ```js
 import React, { useEffect, useState } from 'react';
@@ -122,6 +125,7 @@ Then, instead of printing the data in the console, save it in the data state.
 ```js
 setAdvice(json.data);
 ```
+---
 
 ### Step 6
 
