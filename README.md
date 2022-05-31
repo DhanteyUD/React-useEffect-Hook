@@ -141,7 +141,7 @@ return (
 
 ---
 
-## Final code with styling
+## Final code (without styling)
 
 The final code will look like so:
 
